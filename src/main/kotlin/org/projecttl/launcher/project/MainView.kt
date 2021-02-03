@@ -1,12 +1,34 @@
 package org.projecttl.launcher.project
 
 import javafx.scene.Parent
-import tornadofx.View
-import tornadofx.label
-import tornadofx.vbox
+import tornadofx.*
 
-class MainView: View() {
+class MainView: View("Launcher Login") {
+
     override val root: Parent = vbox {
-        label("Hello, World")
+        text("Username")
+        textfield()
+
+        text("Password")
+        passwordfield()
+
+        checkbox("Always Login") {
+            action {
+                if (this.isSelected) {
+                    println("clicked check box. Status: ON")
+                } else {
+                    println("clicked check box. Status: OFF")
+                }
+            }
+        }
+
+        buttonbar {
+            button("Login") {
+                isDefaultButton = true
+                action {
+                    println("Clicked Login Button")
+                }
+            }
+        }
     }
 }

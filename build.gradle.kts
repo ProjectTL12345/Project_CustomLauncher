@@ -35,7 +35,7 @@ tasks {
 
     jar {
         manifest {
-            attributes["Main-Class"] = "org.projecttl.launcher.project.MainLauncher"
+            attributes["Main-Class"] = project.properties["launcherMain"]
         }
 
         from (shade.map { artifacts ->
