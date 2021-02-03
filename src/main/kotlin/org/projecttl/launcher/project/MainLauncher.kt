@@ -1,5 +1,6 @@
 package org.projecttl.launcher.project
 
+import javafx.stage.Stage
 import tornadofx.App
 import tornadofx.launch
 
@@ -13,4 +14,12 @@ class MainLauncher {
     }
 }
 
-class GetView: App(MainView::class)
+class GetView: App(MainView::class) {
+
+    override fun start(stage: Stage) {
+        super.start(stage)
+
+        stage.width = 265.0
+        stage.height = 170.0
+    }
+}

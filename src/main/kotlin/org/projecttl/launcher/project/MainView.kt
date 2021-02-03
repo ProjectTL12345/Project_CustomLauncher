@@ -3,7 +3,7 @@ package org.projecttl.launcher.project
 import javafx.scene.Parent
 import tornadofx.*
 
-class MainView: View("Launcher Login") {
+class MainView: View("Launcher Login") { // 265 x 130
 
     override val root: Parent = vbox {
         text("Username")
@@ -27,6 +27,7 @@ class MainView: View("Launcher Login") {
                 isDefaultButton = true
                 action {
                     println("Clicked Login Button")
+
                 }
             }
         }
